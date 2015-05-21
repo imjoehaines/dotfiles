@@ -1,0 +1,38 @@
+[alias]
+    l = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=20
+    lm = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=100
+    la = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short
+    lu = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --branches --not --remotes
+    ll = log --max-count=5
+    lt = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=relative --max-count=20
+    lb = "for-each-ref --sort=-committerdate --format='%1B[0;36m%(committerdate:short)%1B[m %(refname:short)' refs/heads"
+    a = add
+    co = checkout
+    c = commit -m
+    s = status
+    b = branch
+    d = diff
+[color]
+    ui = true
+[push]
+    default = matching
+[core]
+    excludesfile = /Users/joehaines/dotfiles/.gitignore
+    editor = vim
+[user]
+    name = Joe Haines
+    email = hello@joehaines.co.uk
+[github]
+    user = imjoehaines
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
