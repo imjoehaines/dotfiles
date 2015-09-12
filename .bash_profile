@@ -26,6 +26,8 @@ alias gs='g s'                    # status
 alias gd='g d'                    # diff
 alias glb='g lb'                  # pretty branch list
 
+alias behat='./vendor/bin/behat'
+
 RED="\033[0;31m"
 YELLOW="\033[0;33m"
 GREEN="\033[0;32m"
