@@ -8,6 +8,9 @@ alias v='vagrant'
 alias vs='v ssh'
 alias vu='v up'
 alias vh='v halt'
+alias hs='homestead ssh'
+alias hu='homestead up'
+alias hh='homestead halt'
 
 # git
 alias g='git'
@@ -25,6 +28,21 @@ alias glt='g lt | cat && echo'    # pretty log (relative date - 20 commits)
 alias gs='g s'                    # status
 alias gd='g d'                    # diff
 alias glb='g lb'                  # pretty branch list
+alias gcleanup='git_cleanup' # delete merged branches
+
+function git_cleanup {
+  git checkout master &> /dev/null
+
+  echo 'Deleting the following branches:'
+  git branch --merged master | grep -v "\* master"
+
+  echo
+  read -p 'Are you sure? ' -n 1 -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
+  fi
+}
 
 alias behat='./vendor/bin/behat'
 alias phpspec='./vendor/bin/phpspec'
