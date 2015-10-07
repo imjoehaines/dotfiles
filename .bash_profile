@@ -97,6 +97,5 @@ export PS1
 
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
-export PATH="/usr/local/sbin:$PATH"
 
 . `brew --prefix`/etc/profile.d/z.sh
