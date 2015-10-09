@@ -33,7 +33,7 @@ alias gcleanup='git_cleanup' # delete merged branches
 function git_cleanup {
   git checkout master &> /dev/null
 
-  branches="$(git branch --merged master | grep -v '\* master')"
+  branches="$(git branch --merged master | grep -vE '(master|develop)')"
 
   if [[ ! -z "$branches" ]]; then
     echo 'Deleting the following branches:'
@@ -43,7 +43,7 @@ function git_cleanup {
     echo
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-      git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
+      git branch --merged master | grep -vE '(master|develop)' | xargs -n 1 git branch -d
     fi
   else
     echo 'No branches to cleanup'
