@@ -98,4 +98,10 @@ export PS1
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
-. `brew --prefix`/etc/profile.d/z.sh
+if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
+  . `brew --prefix`/etc/profile.d/z.sh
+fi
+
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+fi
