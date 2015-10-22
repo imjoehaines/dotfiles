@@ -18,6 +18,7 @@ alias ga="g a"                    # add
 alias gaa="g a -A"                # add all
 alias gb="g b"                    # branch
 alias gc="g c"                    # commit
+alias gcm="g cm"                  # commit with message
 alias gco="g co"                  # checkout
 alias gl='g l | cat && echo'      # pretty log (20 commits)
 alias glm='g lm | cat && echo'    # pretty log (100 commits)
@@ -31,6 +32,10 @@ alias glb='g lb'                  # pretty branch list
 alias gcleanup='git_cleanup' # delete merged branches
 
 function git_cleanup {
+  # get current branch so we can swap back later
+  currentBranch="$(git symbolic-ref HEAD 2>/dev/null)" || currentBranch="(detached HEAD)"
+  currentBranch=${currentBranch##refs/heads/}
+
   git checkout master &> /dev/null
 
   branches="$(git branch --merged master | grep -vE '(master|develop)')"
@@ -47,6 +52,10 @@ function git_cleanup {
     fi
   else
     echo 'No branches to cleanup'
+  fi
+
+  if [[ $currentBranch != 'master' ]]; then
+    git checkout $currentBranch &> /dev/null
   fi
 }
 

@@ -8,7 +8,8 @@
     lb = "for-each-ref --sort=-committerdate --format='%1B[0;36m%(committerdate:short)%1B[m %(refname:short)' refs/heads"
     a = add
     co = checkout
-    c = commit -m
+    c = commit
+    cm = commit -m
     s = status
     b = branch
     d = diff
