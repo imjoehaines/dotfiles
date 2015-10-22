@@ -111,6 +111,6 @@ if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
 
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+if [ -f /Users/joehaines/dotfiles/git-completion.bash ]; then
+  source /Users/joehaines/dotfiles/git-completion.bash
 fi
