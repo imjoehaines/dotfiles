@@ -28,8 +28,9 @@ alias gll='g ll'                  # long log (5 commits)
 alias glt='g lt | cat && echo'    # pretty log (relative date - 20 commits)
 alias gs='g s'                    # status
 alias gd='g d'                    # diff
+alias gdt='g dt'                  # difftool
 alias glb='g lb'                  # pretty branch list
-alias gcleanup='git_cleanup' # delete merged branches
+alias gcleanup='git_cleanup'      # delete merged branches
 
 function git_cleanup {
   # get current branch so we can swap back later
