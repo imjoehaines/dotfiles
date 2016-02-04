@@ -1,52 +1,52 @@
 [alias]
-    l = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=20
-    lm = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=100
-    la = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short
-    lu = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --branches --not --remotes
-    ll = log --max-count=5
-    lt = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=relative --max-count=20
-    lb = "for-each-ref --sort=-committerdate --format='%1B[0;36m%(committerdate:short)%1B[m %(refname:short)' refs/heads"
-    a = add
-    co = checkout
-    c = commit
-    cm = commit -m
-    s = status
-    b = branch
-    d = diff
-    dt = difftool
-    mt = mergetool
+  l = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=20
+  lm = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --max-count=100
+  la = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short
+  lu = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=short --branches --not --remotes
+  ll = log --max-count=5
+  lt = log --pretty=format:'%C(cyan)%ad%Creset %s%d ~ %C(cyan)%an%Creset (%C(red)%h%Creset)' --date=relative --max-count=20
+  lb = "for-each-ref --sort=-committerdate --format='%1B[0;36m%(committerdate:short)%1B[m %(refname:short)' refs/heads"
+  a = add
+  co = checkout
+  c = commit
+  cm = commit -m
+  s = status
+  b = branch
+  d = diff
+  dt = difftool
+  mt = mergetool
 [color]
-    ui = true
+  ui = true
 [push]
-    default = simple
+  default = simple
 [core]
-    excludesfile = /Users/joehaines/dotfiles/.gitignore
-    editor = vim
+  excludesfile = /Users/joehaines/dotfiles/.gitignore
+  editor = subl -w
 [user]
-    name = Joe Haines
-    email = hello@joehaines.co.uk
+  name = Joe Haines
+  email = hello@joehaines.co.uk
 [github]
-    user = imjoehaines
+  user = imjoehaines
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
 [merge]
   tool = sublimerge
 [mergetool "sublimerge"]
-  cmd = subl -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+  cmd = subl -w \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
   trustExitCode = false
 [diff]
   tool = sublimerge
 [difftool]
   prompt = false
 [difftool "sublimerge"]
-  cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
+  cmd = subl -w \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
