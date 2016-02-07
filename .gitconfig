@@ -39,14 +39,3 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
-[merge]
-  tool = sublimerge
-[mergetool "sublimerge"]
-  cmd = subl -w \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
-  trustExitCode = false
-[diff]
-  tool = sublimerge
-[difftool]
-  prompt = false
-[difftool "sublimerge"]
-  cmd = subl -w \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"

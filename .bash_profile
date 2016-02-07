@@ -1,8 +1,7 @@
-alias md='octodown'
-alias reload='source ~/.bash_profile'
-alias tree='tree -C'
 alias ls='ls -GFh'
+alias tree='tree -C'
 alias grep='grep --color=auto'
+alias reload='source ~/.bash_profile'
 
 alias v='vagrant'
 alias vs='v ssh'
@@ -11,6 +10,9 @@ alias vh='v halt'
 alias hs='homestead ssh'
 alias hu='homestead up'
 alias hh='homestead halt'
+
+alias behat='./vendor/bin/behat'
+alias phpspec='./vendor/bin/phpspec'
 
 # git
 alias g='git'
@@ -59,9 +61,6 @@ function git_cleanup {
     git checkout $currentBranch &> /dev/null
   fi
 }
-
-alias behat='./vendor/bin/behat'
-alias phpspec='./vendor/bin/phpspec'
 
 RED="\033[0;31m"
 YELLOW="\033[0;33m"
