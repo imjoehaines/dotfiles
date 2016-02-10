@@ -33,7 +33,7 @@
 [core]
   excludesfile = /Users/joehaines/dotfiles/.gitignore
   editor = subl -w
-  pager = git diff --color | diff-highlight | diff-so-fancy
+  pager = git diff --color | diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [user]
   name = Joe Haines
   email = hello@joehaines.co.uk
