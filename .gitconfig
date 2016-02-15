@@ -9,6 +9,7 @@
   a = add
   co = checkout
   c = commit -v
+  cnd = commit
   cm = commit -m
   s = status
   b = branch
