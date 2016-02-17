@@ -107,6 +107,12 @@ export PS1
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
+# -F: quit if the contents fit the screen
+# -R: colors
+# -X: no clearing of the screen after quit
+LESS=-FRX
+export LESS
+
 if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
   . `brew --prefix`/etc/profile.d/z.sh
 fi
