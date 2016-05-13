@@ -34,7 +34,7 @@
   default = simple
 [core]
   excludesfile = /Users/joehaines/dotfiles/.gitignore
-  editor = subl -w
+  editor = atom --wait
 [user]
   name = Joe Haines
   email = hello@joehaines.co.uk
