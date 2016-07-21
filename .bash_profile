@@ -115,9 +115,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 LESS=-FRX
 export LESS
 
-if [ -f "/Applications/Emacs.app/Contents/MacOS/Emacs" ] ; then
-  export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs"
-fi
+export EDITOR="vim"
 
 if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
   . `brew --prefix`/etc/profile.d/z.sh
