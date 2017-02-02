@@ -1,5 +1,4 @@
 alias ls='ls -GFh'
-alias tree='tree -C'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile'
 
@@ -10,9 +9,6 @@ alias vh='v halt'
 alias hs='homestead ssh'
 alias hu='homestead up'
 alias hh='homestead halt'
-
-alias behat='./vendor/bin/behat'
-alias phpspec='./vendor/bin/phpspec'
 
 # git
 alias g='git'
