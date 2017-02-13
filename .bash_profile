@@ -33,10 +33,6 @@ alias glb='g lb'                  # pretty branch list
 alias gcleanup='git_cleanup'      # delete merged branches
 
 function git_cleanup {
-  # get current branch so we can swap back later
-  currentBranch="$(git symbolic-ref HEAD 2>/dev/null)" || currentBranch="(detached HEAD)"
-  currentBranch=${currentBranch##refs/heads/}
-
   git checkout master &> /dev/null
 
   branches="$(git branch --merged master | grep -vE '(master|develop)')"
@@ -56,7 +52,7 @@ function git_cleanup {
   fi
 
   if [[ $currentBranch != 'master' ]]; then
-    git checkout $currentBranch &> /dev/null
+    git checkout - &> /dev/null
   fi
 }
 
