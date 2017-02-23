@@ -32,6 +32,11 @@ alias gdt='g dt'                  # difftool
 alias glb='g lb'                  # pretty branch list
 alias gcleanup='git_cleanup'      # delete merged branches
 
+# git ignore generator
+function gi() {
+  curl -L -s https://www.gitignore.io/api/$@
+}
+
 function git_cleanup {
   git checkout master &> /dev/null
 
