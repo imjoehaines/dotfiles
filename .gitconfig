@@ -27,9 +27,9 @@
   whitespace = red bold reverse
 [color "diff-highlight"] # http://misc.flogisoft.com/bash/tip_colors_and_formatting#background1
   oldNormal = red bold
-  oldHighlight = "red bold 224"
+  oldHighlight = "red bold 88"
   newNormal = green bold
-  newHighlight = "green bold 193"
+  newHighlight = "green bold 22"
 [push]
   default = simple
 [core]
