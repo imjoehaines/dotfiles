@@ -56,9 +56,7 @@ function git_cleanup {
     echo 'No branches to cleanup'
   fi
 
-  if [[ $currentBranch != 'master' ]]; then
-    git checkout - &> /dev/null
-  fi
+  git checkout - &> /dev/null
 }
 
 RED="\033[0;31m"
