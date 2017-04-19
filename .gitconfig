@@ -14,8 +14,8 @@
   cm = commit -m
   s = status
   b = branch
-  d = diff
-  dt = difftool
+  d = icdiff
+  di = diff
   mt = mergetool
 [color]
   ui = true

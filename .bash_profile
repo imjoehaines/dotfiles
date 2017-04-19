@@ -27,8 +27,8 @@ alias glua='g lu | cat && echo'   # pretty log (all unpushed commits)
 alias gll='g ll'                  # long log (5 commits)
 alias glt='g lt | cat && echo'    # pretty log (relative date - 20 commits)
 alias gs='g s'                    # status
-alias gd='g d'                    # diff
-alias gdt='g dt'                  # difftool
+alias gd='g d'                    # diff (split)
+alias gdi='g di'                  # diff (inline)
 alias glb='g lb'                  # pretty branch list
 alias gcleanup='git_cleanup'      # delete merged branches
 
