@@ -54,5 +54,3 @@
 [pager]
   diff = diff-highlight | diff-so-fancy | less --tabs=1,5
   show = diff-highlight | diff-so-fancy | less --tabs=1,5
-[commit]
-  gpgsign = true
