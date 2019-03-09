@@ -2,14 +2,6 @@ alias ls='ls -GFh'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile'
 
-alias v='vagrant'
-alias vs='v ssh'
-alias vu='v up'
-alias vh='v halt'
-alias hs='homestead ssh'
-alias hu='homestead up'
-alias hh='homestead halt'
-
 # git
 alias g='git'
 alias ga="g a"                    # add
