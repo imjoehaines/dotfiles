@@ -2,6 +2,11 @@ alias ls='ls -GFh'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile'
 
+# use bat instead of cat, if it's available
+if type bat > /dev/null; then
+  alias cat='bat'
+fi
+
 # git
 alias g='git'
 alias ga="g a"                    # add
