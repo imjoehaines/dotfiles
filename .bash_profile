@@ -31,7 +31,7 @@ alias gcleanup='git_cleanup'      # delete merged branches
 
 # git ignore generator
 function gi() {
-  curl -L -s https://www.gitignore.io/api/$@
+  curl --progress-bar https://www.gitignore.io/api/"$(IFS=, ; echo "$*")"
 }
 
 function git_cleanup {
