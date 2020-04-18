@@ -4,7 +4,7 @@ alias reload='source ~/.bash_profile'
 
 # use bat instead of cat, if it's available
 if type bat > /dev/null; then
-  alias cat='bat'
+  alias cat='BAT_THEME=ansi-light bat'
 fi
 
 # git
